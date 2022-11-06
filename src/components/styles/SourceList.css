@@ -1,0 +1,33 @@
+.sources-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.sources-list__item {
+    margin: 15px 15px;
+    font-size: 20px;
+    height: 50px;
+    padding: 0px 50px;
+    border: 1px solid #555;
+    border-radius: 25px;
+    color: #555;
+    background-color: transparent;
+}
+
+@media(max-width: 425px) {
+    .sources-list__item {
+        margin: 8px;
+        font-size: 14px;
+        height: 36px;
+        padding: 0px 30px;
+        border-radius: 18px;
+    }
+}
+
+.active-source {
+    color: #fff;
+    border-color: #555;
+    background-color: #555;
+}

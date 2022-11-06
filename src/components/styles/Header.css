@@ -1,0 +1,142 @@
+.header {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    background-color: #57CC99;
+}
+
+.header__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    font-size: 30px;
+    color: #4E7A67;
+}
+
+.header__logo-icon {
+    margin-right: 5px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.5;
+}
+
+.header__burger {
+    display: none;
+    position: relative;
+}
+
+.header__navbar {
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+}
+
+.header__navbar a {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'verdana';
+    font-size: 16px;
+    color: white;
+}
+
+.navbar__link.active {
+    background: #4E7A67;
+}
+
+@media(max-width: 800px) {
+    body.lock {
+        overflow: hidden;
+    }
+
+    .header__box {
+        padding: 0px 15px;
+        height: 50px;
+    }
+
+    .header__logo {
+        font-weight: 900;
+        font-size: 24px;
+        color: #4E7A67;
+        text-decoration: none;
+    }
+
+    .header__navbar {
+        padding: 100px 50px 50px 50px;
+        display: block;
+        position: fixed;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #D1FBD2;
+        transition: top 0.5s ease-out;
+        overflow: auto;
+        z-index: -1;
+    }
+
+    .header__navbar.active {
+        top: 0;
+    }
+
+    .header__navbar a {
+        font-size: 24px;
+        color:#000;
+        padding: 15px 15px;
+        display: block;
+        text-align: center;
+    }
+
+    .navbar__link.active {
+        background: #FF3D00;
+    }
+
+    .header__burger {
+        display: block;
+        width: 30px;
+        height: 20px;
+    }
+    
+        .header__burger::before, .header__burger::after, .header__burger span {
+            transition: all 0.5s ease;
+            content: '';
+            background-color: #4E7A67;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+        }
+
+        .header__burger::before {
+            top: 0;
+        }
+
+        .header__burger::after {
+            bottom: 0;
+        }
+
+        .header__burger span {
+            top: 9px;
+        }
+            
+            .header__burger.active::before {
+                transform: rotate(45deg);
+                top: 9px;
+            }
+            .header__burger.active::after {
+                transform: rotate(-45deg);
+                bottom: 9px;
+            }
+            .header__burger.active span {
+                transform: scale(0);
+            }
+}

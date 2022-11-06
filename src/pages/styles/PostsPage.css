@@ -1,0 +1,45 @@
+.posts-page {
+    padding: 80px 0;
+}
+  
+.posts-page__footer {
+    height: 100px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(max-width: 800px) {
+    .posts-page {
+      padding: 55px 0;
+    }
+}
+  
+.posts-page__error-message {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(218, 27, 27);
+}
+
+.load-btn {
+    margin-top: 15px;
+    font-size: 20px;
+    height: 50px;
+    padding: 0px 50px;
+    border: 0px;
+    border-radius: 25px;
+    color: #fff;
+    background-color: #000;
+}
+  
+@media(max-width: 425px) {
+    .load-btn {
+      height: 50px;
+      font-size: 20px;
+      padding: 0px 50px;
+      border-radius: 25px;
+    }
+}
+  

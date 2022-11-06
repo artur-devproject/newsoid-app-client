@@ -1,0 +1,8 @@
+.about-page {
+    padding: 80px 20px;
+    font-size: 24px;
+}
+  
+.about-page > * {
+    margin-bottom: 24px;
+}
